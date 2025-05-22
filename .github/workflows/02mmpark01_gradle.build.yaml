@@ -21,10 +21,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: grant execute permission
-        uses: chmod +x gradlew
+        run: chmod +x gradlew
 
       - name: build with gradle
-        uses: ./gradlew clean build
+        run: ./gradlew clean build
       
       - name: list build/libs directory
         run: ls -al ./build/libs
